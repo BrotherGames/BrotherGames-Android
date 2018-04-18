@@ -12,6 +12,7 @@
             android:id="@+id/nav_profile"
             android:icon="@drawable/profile"
             android:title="Profile" />
+
         <item
             android:id="@+id/nav_community"
             android:icon="@drawable/community"
@@ -19,11 +20,13 @@
         <item
             android:id="@+id/nav_changes"
             android:icon="@drawable/changes"
-            android:title="My Changes" />
+            android:title="My Changes"
+            android:onClick="openMyList" />
         <item
             android:id="@+id/nav_mychanges"
             android:icon="@drawable/mychanges"
-            android:title="All Changes" />
+            android:title="All Changes"
+            android:onClick="openAllList" />
 
     </group>
 

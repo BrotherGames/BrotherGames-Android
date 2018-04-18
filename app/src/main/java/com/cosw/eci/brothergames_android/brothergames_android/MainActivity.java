@@ -1,10 +1,10 @@
 package com.cosw.eci.brothergames_android.brothergames_android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,9 +12,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public final static String EXTRA_MESSAGE = "com.cosw.eci.brothergames_android.brothergames_android.MESSAGE";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,4 +103,23 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void openMyList(View view) {
+        Intent intent = new Intent(this, DisplayMyChanges.class);
+        //EditText editText = (EditText) findViewById(R.id.edit_message);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+
+
+    }
+
+    //public void openAllList(View view) {
+    //    Intent intent = new Intent(this, DisplayAllChanges.class);
+    //    EditText editText = (EditText) findViewById(R.id.edit_message);
+    //    String message = editText.getText().toString();
+    //    intent.putExtra(EXTRA_MESSAGE, message);
+    //    startActivity(intent);
+
+    //}
 }
