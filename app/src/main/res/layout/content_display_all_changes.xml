@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.cosw.eci.brothergames_android.brothergames_android.DisplayMyChanges"
-    tools:showIn="@layout/app_bar_display_my_changes">
+    tools:context="com.cosw.eci.brothergames_android.brothergames_android.DisplayAllChanges"
+    tools:showIn="@layout/app_bar_display_all_changes">
 
 </android.support.constraint.ConstraintLayout>

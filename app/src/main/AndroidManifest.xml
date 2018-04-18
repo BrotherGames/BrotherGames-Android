@@ -22,6 +22,10 @@
         <activity
             android:name=".DisplayMyChanges"
             android:label="@string/title_activity_display_my_changes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DisplayAllChanges"
+            android:label="@string/title_activity_display_all_changes"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

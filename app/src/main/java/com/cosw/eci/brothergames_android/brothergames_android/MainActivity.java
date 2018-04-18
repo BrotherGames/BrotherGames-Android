@@ -86,15 +86,18 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_community) {
 
         } else if (id == R.id.nav_mychanges) {
-
+            Intent intent = new Intent(this, DisplayMyChanges.class);
+            startActivity(intent);
         } else if (id == R.id.nav_changes) {
-
+            Intent intent = new Intent(this, DisplayAllChanges.class);
+            startActivity(intent);
         } else if (id == R.id.nav_logout) {
 
         }
@@ -104,10 +107,10 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void openMyList(MenuItem item) {
-         Intent intent = new Intent(this, DisplayMyChanges.class);
-        startActivity(intent);
-    }
+    //public void openMyList(MenuItem item) {
+    //     Intent intent = new Intent(this, DisplayMyChanges.class);
+    //    startActivity(intent);
+    //}
 
     //public void openAllList(View view) {
     //    Intent intent = new Intent(this, DisplayAllChanges.class);
