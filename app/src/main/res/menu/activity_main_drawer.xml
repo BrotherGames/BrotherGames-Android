@@ -26,11 +26,11 @@
             android:id="@+id/nav_mychanges"
             android:icon="@drawable/mychanges"
             android:title="All Changes"
-            android:onClick="openAllList" />
+             />
 
     </group>
 
-    <item >
+    <group>
         <menu>
             <item
                 android:id="@+id/nav_logout"
@@ -38,6 +38,6 @@
                 android:title="Sign Out" />
 
         </menu>
-    </item>
+    </group>
 
 </menu>

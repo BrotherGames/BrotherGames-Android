@@ -104,14 +104,9 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void openMyList(View view) {
-        Intent intent = new Intent(this, DisplayMyChanges.class);
-        //EditText editText = (EditText) findViewById(R.id.edit_message);
-        //String message = editText.getText().toString();
-        //intent.putExtra(EXTRA_MESSAGE, message);
+    public void openMyList(MenuItem item) {
+         Intent intent = new Intent(this, DisplayMyChanges.class);
         startActivity(intent);
-
-
     }
 
     //public void openAllList(View view) {
