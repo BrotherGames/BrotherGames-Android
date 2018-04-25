@@ -24,17 +24,13 @@
             android:id="@+id/nav_mychanges"
             android:icon="@drawable/mychanges"
             android:title="All Changes" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Sign Out" />
 
     </group>
 
-    <item >
-        <menu>
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/logout"
-                android:title="Sign Out" />
 
-        </menu>
-    </item>
 
 </menu>

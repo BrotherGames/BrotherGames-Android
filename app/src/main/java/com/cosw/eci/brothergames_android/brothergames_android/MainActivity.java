@@ -12,9 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.app.Fragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,8 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+        FragmentManager fragmentManager;
+        FragmentTransaction fragmentTransaction;
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
@@ -91,6 +97,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_changes) {
 
         } else if (id == R.id.nav_logout) {
+
+
 
         }
 
