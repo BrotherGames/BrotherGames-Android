@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
 
-import com.cosw.eci.brothergames_android.brothergames_android.entity.User;
+import com.cosw.eci.brothergames_android.brothergames_android.data.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;

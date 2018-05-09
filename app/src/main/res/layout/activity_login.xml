@@ -7,7 +7,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.cosw.eci.brothergames_android.brothergames_android.LoginActivity"
+    tools:context="com.cosw.eci.brothergames_android.brothergames_android.ui.activity.LoginActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -62,14 +62,14 @@
             android:hint=" Password"/>
 
         <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SIG IN"
-            android:id="@+id/button"
             android:layout_below="@+id/etpass"
-            android:onClick="ingresar"
+            android:layout_marginBottom="24dp"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"/>
+            android:onClick="ingresar"
+            android:text="SIGN IN" />
 
         <TextView android:id="@+id/signup"
             android:layout_width="match_parent"

@@ -1,5 +1,6 @@
-package com.cosw.eci.brothergames_android.brothergames_android;
+package com.cosw.eci.brothergames_android.brothergames_android.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.cosw.eci.brothergames_android.brothergames_android.R;
+import com.cosw.eci.brothergames_android.brothergames_android.ui.activity.Exchanges;
+import com.cosw.eci.brothergames_android.brothergames_android.ui.activity.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -68,6 +73,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -81,14 +88,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            Intent intent1 = new Intent(getApplicationContext(), prueba.class);
+            startActivity(intent1);
+
         } else if (id == R.id.nav_profile) {
 
         } else if (id == R.id.nav_community) {
 
         } else if (id == R.id.nav_mychanges) {
-
-        } else if (id == R.id.nav_changes) {
+            Intent intent = new Intent(getApplicationContext(), Exchanges.class);
+            startActivity(intent);
 
         }
 

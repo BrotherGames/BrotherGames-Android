@@ -1,4 +1,4 @@
-package com.cosw.eci.brothergames_android.brothergames_android.entity;
+package com.cosw.eci.brothergames_android.brothergames_android.data.entity;
 
 
 

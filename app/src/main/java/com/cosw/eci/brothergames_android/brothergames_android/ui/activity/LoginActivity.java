@@ -1,4 +1,4 @@
-package com.cosw.eci.brothergames_android.brothergames_android;
+package com.cosw.eci.brothergames_android.brothergames_android.ui.activity;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cosw.eci.brothergames_android.brothergames_android.R;
 import com.cosw.eci.brothergames_android.brothergames_android.database.DatabaseManagerUser;
+
+
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -74,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (databaseManager.comprobarRegistro(email)){
                             comprobar = databaseManager.getDb().rawQuery("SELECT correo, password FROM demo" + " WHERE correo='"+email+"' AND password='"+password+"'",null);
                             if(comprobar.moveToFirst()){
-                                Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                                Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                                 intent.putExtra("IDENT",email);
                                 startActivity(intent);
                                 finish();

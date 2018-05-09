@@ -1,4 +1,4 @@
-package com.cosw.eci.brothergames_android.brothergames_android;
+package com.cosw.eci.brothergames_android.brothergames_android.ui.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cosw.eci.brothergames_android.brothergames_android.R;
 import com.cosw.eci.brothergames_android.brothergames_android.database.DatabaseManagerUser;
 
 import java.io.ByteArrayOutputStream;
@@ -127,7 +127,7 @@ public class UserRegistro extends AppCompatActivity {
                             managerUsuario.insertar_parametros(null, sEmail, sPassword, bytes, sNombre);
                             String mesg = String.format("%s ha sido guardado en la BBDD", sNombre);
                             Toast.makeText(getBaseContext(),mesg, Toast.LENGTH_LONG).show();
-                            Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                            Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                             intent.putExtra("IDENT",sEmail);
                             startActivity(intent);
                             finish();
