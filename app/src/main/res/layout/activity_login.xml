@@ -21,46 +21,68 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_width="338dp"
+            android:layout_height="123dp"
+            android:background="#E0E0E0"
+            android:foregroundGravity="center"
             app:srcCompat="@drawable/logo1" />
 
-
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
+            android:gravity="center"
             android:text="Introduce tu correo y contraseña"
-            android:textColor="@color/colorBlanco"
+            android:textColor="@color/colorTexto"
             android:textSize="17.5dp" />
+
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="341dp"
+        android:layout_height="387dp"
+        android:layout_gravity="center"
+        android:background="#E0E0E0"
+        android:gravity="center"
         android:orientation="vertical"
-        android:paddingTop="100dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:padding="10dp"
+        android:paddingLeft="29dp"
+        android:paddingRight="29dp"
+        android:paddingTop="10dp">
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="Introduce tu correo y contraseña"
+            android:textColor="@color/colorTexto"
+            android:textSize="17.5dp" />
+
+        <EditText
             android:id="@+id/etusuario"
-            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
             android:layout_marginBottom="8dp"
-            android:hint=" E-mail" />
+            android:layout_marginTop="30dp"
+            android:background="#A0A0A0"
+            android:hint=" E-mail"
+            android:textColor="@color/colorPrimaryDark" />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:id="@+id/etpass"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#A0A0A0"
+            android:hint=" Password"
             android:inputType="textPassword"
-            android:hint=" Password"/>
+            android:textColor="@color/colorPrimaryDark" />
 
         <Button
             android:id="@+id/button"
@@ -72,13 +94,16 @@
             android:onClick="ingresar"
             android:text="SIGN IN" />
 
-        <TextView android:id="@+id/signup"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            android:text="Quieres ser parte de nuestra comunidad? Registrate"
             android:gravity="center"
-            android:textSize="16dip"/>
+            android:text="Quieres ser parte de nuestra comunidad? Registrate"
+            android:textColor="@color/colorTexto"
+            android:textSize="17dip"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

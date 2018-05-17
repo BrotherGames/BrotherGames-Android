@@ -1,10 +1,10 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:actionModeBackground">@color/colorPrimary</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:actionModeBackground">@drawable/fondobg</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
@@ -20,15 +20,15 @@
         <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
 
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
 
-        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@drawable/fondobg</item>
 
         <item name="colorControlNormal">@color/iron</item>
-        <item name="colorControlActivated">@color/colorBlanco</item>
-        <item name="colorControlHighlight">@color/colorBlanco</item>
+        <item name="colorControlActivated">@color/colorTexto</item>
+        <item name="colorControlHighlight">@color/colorTexto</item>
         <item name="android:textColorHint">@color/iron</item>
 
         <item name="colorButtonNormal">@color/colorPrimaryDarkButton</item>
