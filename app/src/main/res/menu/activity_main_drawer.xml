@@ -20,6 +20,10 @@
             android:id="@+id/nav_mychanges"
             android:icon="@drawable/mychanges"
             android:title="Exchange Games" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Sign Out" />
 
     </group>
 
