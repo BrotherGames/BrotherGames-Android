@@ -37,8 +37,9 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder>{
     public void onBindViewHolder(ViewHolder holder, int position) {
         Team team = teams.get(position);
         holder.name.setText(team.getName());
-        holder.shortName.setText(team.getShortName());
-        Picasso.with(context).load(team.getImageUrl()).into(holder.logo);
+        holder.description.setText(team.getDescription());
+        holder.rate.setText(team.getRate());
+        Picasso.with(context).load(team.getPhoto()).into(holder.logo);
     }
 
     @Override
@@ -48,14 +49,16 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.ViewHolder>{
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name, shortName;
+        TextView name, description, rate;
         ImageView logo;
 
         public ViewHolder(View view) {
             super(view);
             name = (TextView) view.findViewById(R.id.name);
-            shortName = (TextView) view.findViewById(R.id.shortName);
+            description = (TextView) view.findViewById(R.id.description);
+            rate = (TextView) view.findViewById(R.id.rate);
             logo = (ImageView) view.findViewById(R.id.logo);
+
         }
     }
 }

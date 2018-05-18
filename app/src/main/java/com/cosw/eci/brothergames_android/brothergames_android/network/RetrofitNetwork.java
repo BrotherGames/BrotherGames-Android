@@ -14,7 +14,7 @@ import com.cosw.eci.brothergames_android.brothergames_android.services.*;
 
 
 public class RetrofitNetwork {
-    private static final String BASE_URL = "https://raw.githubusercontent.com/sancarbar/starting-android-lists/master/";
+    private static final String BASE_URL = "https://brothergames.herokuapp.com";
 
     private TeamsService teamsService;
 

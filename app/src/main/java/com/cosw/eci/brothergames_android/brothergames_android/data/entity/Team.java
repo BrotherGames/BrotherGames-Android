@@ -12,11 +12,12 @@ import com.j256.ormlite.table.DatabaseTable;
 public class Team  extends BaseEntity {
     @DatabaseField(columnName = "name")
     private String name;
-    @DatabaseField(columnName = "shortName")
-    private String shortName;
-    @DatabaseField(columnName = "imageUrl")
-    private String imageUrl;
-
+    @DatabaseField(columnName = "description")
+    private String description;
+    @DatabaseField(columnName = "photo")
+    private String photo;
+    @DatabaseField(columnName = "rateAcum")
+    private String rate;
     public Team() {
     }
 
@@ -28,19 +29,23 @@ public class Team  extends BaseEntity {
         this.name = name;
     }
 
-    public String getShortName() {
-        return shortName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setPhoto(String imageUrl) {
+        this.photo = photo;
     }
+
+    public String getRate() { return rate; }
+
+    public void setRate(String rate) { this.rate = rate; }
 }
