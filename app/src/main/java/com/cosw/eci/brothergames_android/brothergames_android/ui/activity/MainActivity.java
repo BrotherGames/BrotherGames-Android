@@ -25,22 +25,24 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private DatabaseManagerUser databaseManagerUser;
     private User itemUsuario;
-    private String ident;
+    private String ident2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle b = getIntent().getExtras();
+      ident2 = b.getString("IDENT2");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Bundle b = getIntent().getExtras();
 
-        ident = b.getString("IDENT");
 
-        databaseManagerUser= new DatabaseManagerUser(getApplicationContext());
-        itemUsuario = databaseManagerUser.getUsuario(ident);
-        View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
-        ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(itemUsuario.getNombre());
-        ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
+
+
+      //  databaseManagerUser= new DatabaseManagerUser(getApplicationContext());
+     //   itemUsuario = databaseManagerUser.getUsuario(ident);
+    //    View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
+    //    ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(itemUsuario.getNombre());
+    //    ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
