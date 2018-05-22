@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AppCompatActivity;
+import android.util.EventLogTags;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +32,8 @@ public class UserRegistro extends AppCompatActivity {
     private EditText password;
     private EditText nombre;
     private EditText email;
+    private EditText description;
+
     private Button registrar;
     private DatabaseManagerUser managerUsuario;
     private String sPassword, sNombre, sEmail;
@@ -50,6 +53,7 @@ public class UserRegistro extends AppCompatActivity {
         password = (EditText)findViewById(R.id.password_registro);
         nombre = (EditText)findViewById(R.id.nombre_registro);
         registrar = (Button)findViewById(R.id.btn_registro_usuario);
+        description= (EditText)findViewById(R.id.description_registro);
         bitmap_foto = BitmapFactory.decodeResource(getResources(),R.drawable.imagen);
         roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap_foto);
         roundedBitmapDrawable.setCircular(true);
@@ -88,6 +92,8 @@ public class UserRegistro extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 intent.putExtra("IDENT",email.getText().toString());
+                intent.putExtra("IDENTNAME",nombre.getText().toString());
+                intent.putExtra("IDENTDESCRIPTION", description.getText().toString());
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);

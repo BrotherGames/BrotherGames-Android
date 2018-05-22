@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/imagen" />
 
         <TextView
-            android:id="@+id/tv_nombre_usuario_menu"
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"

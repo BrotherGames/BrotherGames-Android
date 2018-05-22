@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                             if(comprobar.moveToFirst()){
                                 Intent intent =new Intent(getApplicationContext(), MainActivity.class);
                                 intent.putExtra("IDENT",email);
+
                                 startActivity(intent);
                                 finish();
                                 progressDialog.dismiss();

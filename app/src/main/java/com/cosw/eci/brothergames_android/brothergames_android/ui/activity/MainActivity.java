@@ -28,9 +28,8 @@ public class MainActivity extends AppCompatActivity
     private String ident2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-       String user=(String) getIntent().getSerializableExtra("IDENT");
-       System.out.print("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-        System.out.print(user);
+       String email=(String) getIntent().getSerializableExtra("IDENT");
+        String user=(String) getIntent().getSerializableExtra("IDENTNAME");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity
     // itemUsuario = databaseManagerUser.getUsuario(user);
      View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
      ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(user);
-        ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
+        ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(email);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -115,6 +114,14 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_mychanges) {
             Intent intent = new Intent(getApplicationContext(), Exchanges.class);
             startActivity(intent);
+
+        }else if(id==R.id.nav_profile){
+
+            Intent intent=new Intent(getApplicationContext(),Profile.class);
+            startActivity(intent);
+
+        }else if(id==R.id.nav_logout){
+            finish();
 
         }
 
