@@ -117,14 +117,10 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent1);
 
         } else if (id == R.id.nav_profile) {
-
-        }  else if (id == R.id.nav_mychanges) {
+            Intent intent3=new Intent(getApplicationContext(),Profile.class);
+            startActivity(intent3);
+        } else if (id == R.id.nav_mychanges) {
             Intent intent = new Intent(getApplicationContext(), Exchanges.class);
-            startActivity(intent);
-
-        }else if(id==R.id.nav_profile){
-
-            Intent intent=new Intent(getApplicationContext(),Profile.class);
             startActivity(intent);
 
         }else if(id==R.id.nav_logout){
