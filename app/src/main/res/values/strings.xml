@@ -87,4 +87,5 @@
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_home2">HomeActivity2</string>
     <string name="title_activity_prueba">prueba</string>
+    <string name="title_activity_games">games</string>
 </resources>

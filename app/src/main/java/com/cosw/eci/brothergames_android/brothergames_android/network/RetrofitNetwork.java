@@ -10,6 +10,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import com.cosw.eci.brothergames_android.brothergames_android.data.entity.Team;
+import com.cosw.eci.brothergames_android.brothergames_android.data.entity.User;
 import com.cosw.eci.brothergames_android.brothergames_android.services.*;
 
 
@@ -26,6 +27,16 @@ public class RetrofitNetwork {
     public void getTeams( RequestCallback<List<Team>> requestCallback ){
        try {
             Call<List<Team>> call = teamsService.getTeamsList( );
+            Response<List<Team>> execute = call.execute();
+            requestCallback.onSuccess( execute.body() );
+        }
+        catch ( IOException e ) {
+            requestCallback.onFailed( new NetworkException( 0, null, e ) );
+        }
+    }
+    public void getGame( String namegame, RequestCallback<List<Team>> requestCallback ){
+        try {
+            Call<List<Team>> call = teamsService.getGame(namegame);
             Response<List<Team>> execute = call.execute();
             requestCallback.onSuccess( execute.body() );
         }

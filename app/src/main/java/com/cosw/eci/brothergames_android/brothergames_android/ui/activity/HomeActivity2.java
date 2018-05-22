@@ -404,8 +404,7 @@ public class HomeActivity2 extends AppCompatActivity {
         setContentView( R.layout.home_activity);
         recyclerView = (RecyclerView) findViewById( R.id.recyclerView);
         configureRecyclerView();
-        //createTeamLocalDB();
-        //getAllTeamsLocalDB();
+
         ConectToApiNetwork ca = new ConectToApiNetwork();
     }
 
@@ -452,11 +451,6 @@ public class HomeActivity2 extends AppCompatActivity {
                 }
             });
         }
-
-
-
-
-
     }
 }
 

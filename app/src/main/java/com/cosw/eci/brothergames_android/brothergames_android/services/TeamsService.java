@@ -7,10 +7,13 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 
 public interface TeamsService {
 
     @GET( "/searchGame/games" )
     Call<List<Team>> getTeamsList();
+    @GET( "/searchGame/{namegame}" )
+    Call<List<Team>> getGame(@Path("namegame") String namegame);
 }
