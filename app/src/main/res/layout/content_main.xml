@@ -56,7 +56,7 @@
             android:textColor="@color/colorPrimaryDark" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/searchgame"
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/buscar"

@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.cosw.eci.brothergames_android.brothergames_android.R;
@@ -34,9 +35,16 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
+        Button button= (Button) findViewById(R.id.searchgame);
+        final TextView busqueda = (TextView) findViewById(R.id.videojuego);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,games.class);
+                intent.putExtra("namegame",busqueda.getText());
+                System.out.println(busqueda.getText());
+                startActivity(intent);
+            }
+        });
 
       //  databaseManagerUser= new DatabaseManagerUser(getApplicationContext());
     // itemUsuario = databaseManagerUser.getUsuario(user);
@@ -45,14 +53,6 @@ public class MainActivity extends AppCompatActivity
         ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(email);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
