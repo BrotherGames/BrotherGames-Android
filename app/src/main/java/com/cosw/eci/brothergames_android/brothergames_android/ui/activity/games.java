@@ -45,7 +45,7 @@ public class games extends AppCompatActivity {
         configureRecyclerView();
 
         games.ConectToApiNetwork ca = new games.ConectToApiNetwork();
-        //hola
+
 
 
     }
