@@ -2,6 +2,7 @@ package com.cosw.eci.brothergames_android.brothergames_android.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -27,8 +28,11 @@ public class Profile extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
+        String email=(String) getIntent().getSerializableExtra("IDENTNAME");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        TextView displayInfo=(TextView)findViewById(R.id.tv_nombre_usuario_menu);
+        TextView displayInfo=(TextView)findViewById(R.id.textView_email);
+               displayInfo.setText(email);
     }
 
 }

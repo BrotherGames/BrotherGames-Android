@@ -30,4 +30,16 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:text="New Text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
 </android.support.design.widget.CoordinatorLayout>

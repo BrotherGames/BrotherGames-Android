@@ -4,8 +4,71 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.cosw.eci.brothergames_android.brothergames_android.ui.activity.Profile"
     tools:showIn="@layout/activity_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0E0E0"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="279dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="117dp"
+            app:srcCompat="@drawable/profile"
+            tools:layout_editor_absoluteX="9dp"
+            tools:layout_editor_absoluteY="310dp" />
+
+        <EditText
+            android:id="@+id/PERFIL"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:ems="10"
+            android:inputType="textNoSuggestions|textPersonName"
+            android:text="PERFIL"
+            android:textColor="@android:color/background_dark"
+            android:textColorHighlight="@color/cardview_light_background"
+            android:textColorHint="@android:color/background_dark"
+            android:textSize="@android:dimen/notification_large_icon_height"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="29dp" />
+
+        <TextView
+            android:id="@+id/textView_description"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:text="Description"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="380dp" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text="Email"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHint="@color/colorPrimaryDark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="183dp" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
