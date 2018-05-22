@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity
     private String ident2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Bundle b = getIntent().getExtras();
-      ident2 = b.getString("IDENT2");
+       String user=(String) getIntent().getSerializableExtra("IDENT");
+       System.out.print("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        System.out.print(user);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -39,10 +40,10 @@ public class MainActivity extends AppCompatActivity
 
 
       //  databaseManagerUser= new DatabaseManagerUser(getApplicationContext());
-     //   itemUsuario = databaseManagerUser.getUsuario(ident);
-    //    View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
-    //    ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(itemUsuario.getNombre());
-    //    ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
+    // itemUsuario = databaseManagerUser.getUsuario(user);
+     View header = ((NavigationView)findViewById(R.id.nav_view)).getHeaderView(0);
+     ((TextView) header.findViewById(R.id.tv_nombre_usuario_menu)).setText(user);
+        ((TextView) header.findViewById(R.id.tv_correo_menu)).setText(itemUsuario.getCorreo());
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
