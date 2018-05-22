@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 import com.cosw.eci.brothergames_android.brothergames_android.R;
 import com.cosw.eci.brothergames_android.brothergames_android.data.entity.Team;
@@ -65,12 +66,14 @@ public class games extends AppCompatActivity {
         private List<Team> teamList;
 
         public ConectToApiNetwork() {
+
             rfN = new RetrofitNetwork();
             executorService = Executors.newFixedThreadPool(1);
             executorService.execute(new Runnable() {
                 @Override
                 public void run() {
-                    rfN.getGame((String) getIntent().getSerializableExtra("namegame"), new RequestCallback<List<Team>>() {
+                    String game = (String) getIntent().getSerializableExtra("gamesearch");
+                    rfN.getGame(game, new RequestCallback<List<Team>>() {
                         @Override
                         public void onSuccess(List<Team> response) {
                             teamList = response;

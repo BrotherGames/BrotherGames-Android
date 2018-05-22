@@ -14,6 +14,6 @@ public interface TeamsService {
 
     @GET( "/searchGame/games" )
     Call<List<Team>> getTeamsList();
-    @GET( "/searchGame/{namegame}" )
-    Call<List<Team>> getGame(@Path("namegame") String namegame);
+    @GET( "/searchGame/{gamesearch}" )
+    Call<List<Team>> getGame(@Path("gamesearch") String gamesearch);
 }

@@ -34,9 +34,10 @@ public class RetrofitNetwork {
             requestCallback.onFailed( new NetworkException( 0, null, e ) );
         }
     }
-    public void getGame( String namegame, RequestCallback<List<Team>> requestCallback ){
+    public void getGame( String gamesearch, RequestCallback<List<Team>> requestCallback ){
         try {
-            Call<List<Team>> call = teamsService.getGame(namegame);
+            System.out.println("retrofil "+gamesearch);
+            Call<List<Team>> call = teamsService.getGame("tera");
             Response<List<Team>> execute = call.execute();
             requestCallback.onSuccess( execute.body() );
         }

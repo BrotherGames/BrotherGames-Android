@@ -16,7 +16,7 @@ public class Profile extends Activity {
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_login );
+        setContentView( R.layout.activity_login);
         String email=(String) getIntent().getSerializableExtra("IDENT");
         TextView displayInfo=(TextView) findViewById(R.id.tv_name);
         displayInfo.setText(email);

@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cosw.eci.brothergames_android.brothergames_android.R;
@@ -27,22 +28,30 @@ public class MainActivity extends AppCompatActivity
     private DatabaseManagerUser databaseManagerUser;
     private User itemUsuario;
     private String ident2;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //final Intent intentbusqueda = new Intent(getApplication(),games.class);
        String email=(String) getIntent().getSerializableExtra("IDENT");
         String user=(String) getIntent().getSerializableExtra("IDENTNAME");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button button= (Button) findViewById(R.id.searchgame);
-        final TextView busqueda = (TextView) findViewById(R.id.videojuego);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buscarJuego= (Button) findViewById(R.id.searchgame);
+         //TextView busqueda = (TextView) findViewById(R.id.videojuego);
+        //EditText busqueda = (EditText) findViewById(R.id.videojuego);
+        buscarJuego.setOnClickListener(new View.OnClickListener() {
+            EditText busqueda = (EditText) findViewById(R.id.videojuego);
+            Intent intentbusqueda = new Intent(getApplication(),games.class);
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,games.class);
-                intent.putExtra("namegame",busqueda.getText());
-                System.out.println(busqueda.getText());
-                startActivity(intent);
+                //EditText busqueda = (EditText) findViewById(R.id.videojuego);
+                //intentbusqueda = new Intent(getApplicationContext(),games.class);
+                System.out.println("Main "+busqueda.getText());
+                intentbusqueda.putExtra("gamesearch", busqueda.getText());
+                System.out.println("Main "+intentbusqueda.getSerializableExtra("gamesearch"));
+                startActivity(intentbusqueda);
             }
         });
 
@@ -109,9 +118,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_profile) {
 
-        } else if (id == R.id.nav_community) {
-
-        } else if (id == R.id.nav_mychanges) {
+        }  else if (id == R.id.nav_mychanges) {
             Intent intent = new Intent(getApplicationContext(), Exchanges.class);
             startActivity(intent);
 
