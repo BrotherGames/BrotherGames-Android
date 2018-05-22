@@ -87,6 +87,7 @@ public class UserRegistro extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                intent.putExtra("IDENT",email.getText().toString());
                 startActivity(intent);
                 finish();
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
